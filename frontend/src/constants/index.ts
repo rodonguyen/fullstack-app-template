@@ -1,6 +1,6 @@
 const constants = {
-  LOGIN_URL: "/login",
-  AUTHED_ENDPOINT: "/authed-only-endpoint",
-};
+	LOGIN_URL: '/login',
+	AUTHED_ENDPOINT: '/authed-only-endpoint'
+}
 
-export default constants;
+export default constants

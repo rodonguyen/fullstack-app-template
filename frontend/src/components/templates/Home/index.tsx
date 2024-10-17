@@ -1,17 +1,16 @@
-import React, { useEffect } from 'react';
-import apis from '../../../api';
+import React, { useEffect } from 'react'
+import apis from '../../../api'
 
-const Home = () => {
+const Home: React.FC = () => {
+	useEffect(() => {
+		apis.AuthedEndpoint()
+	}, [])
 
-  useEffect(() => {
-    apis.AuthedEndpoint()
-  }, [])
-
-  return (
-    <div>
-      <p>You're on the home page</p>
-    </div>
-  )
+	return (
+		<div>
+			<p className="bg-red-500 text-black">You're on the home page</p>
+		</div>
+	)
 }
 
 export default Home

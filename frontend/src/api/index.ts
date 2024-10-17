@@ -1,9 +1,9 @@
-import UserLogin from "./UserLogin";
-import AuthedEndpoint from "./AuthedEndpoint";
+import UserLogin from './UserLogin'
+import AuthedEndpoint from './AuthedEndpoint'
 
 const apis = {
-  UserLogin,
-  AuthedEndpoint,
-};
+	UserLogin,
+	AuthedEndpoint
+}
 
-export default apis;
+export default apis
