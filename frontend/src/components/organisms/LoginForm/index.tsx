@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import TextInput from '../../molecules/TextInput'
 import Spacer from '../../atoms/Spacer'
 import apis from '../../../api'
-import ClipLoader from 'react-spinners/ClipLoader'
 
 const Form = styled.form`
 	height: 33vh;
@@ -41,30 +40,9 @@ const InputsContainer = styled.div`
 	mask: var(--mask);
 `
 
-const StyledButton = styled.button`
-	background-color: white;
-	color: black;
-	padding: 10px;
-	border-radius: 0;
-	border: 1px solid black;
-	width: fit-content;
-	min-width: 150px;
-	box-shadow: 5px 5px 0px black;
-	outline: none;
-
-	&:hover {
-		outline: 0;
-	}
-	&:active {
-		outline: 0;
-		transition: 0.1s ease-in-out;
-		transform: translateY(4px);
-		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
-	}
-`
 
 const LoginForm: React.FC = () => {
-	const [isSubmitting, setIsSubmitting] = useState(false)
+	const [, setIsSubmitting] = useState(false)
 
 	const onSubmit = async (e: any) => {
 		e.preventDefault()
@@ -72,7 +50,7 @@ const LoginForm: React.FC = () => {
 
 		const [{ value: username }, { value: password }] = e.target
 
-		apis.UserLogin(username, password).then((res: any) => {
+		apis.UserLogin(username, password).then(() => {
 			setIsSubmitting(false)
 		})
 	}
